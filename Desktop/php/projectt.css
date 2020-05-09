@@ -1,0 +1,259 @@
+header {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  *{
+      box-sizing: border-box;
+      padding: 0;
+      margin:0;
+      text-decoration: none;
+  }
+  .regis{
+    text-align: center;
+  }
+  .regis a{
+      text-decoration: solid;
+      color: rgb(150, 40, 40);
+  }
+  
+     video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width:100%;
+    min-height:100%;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .astyndagy{
+      width: 100%;
+      background: black;
+      color: white;    
+      margin:10px 0px 0px 0px;
+  }
+  .first{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .first ul li {
+      text-align: center;
+      list-style-type: none;
+  }
+  .first ul li a{
+      color: rgb(168, 33, 33);
+      font-size: 25px;
+  }
+  .container{
+      position: relative;
+      z-index: 2;
+  }
+  .basy{
+      width: 100%;
+      height: 3rem;
+      background-color: rgb(156, 43, 43);
+      display: grid;
+     grid-template-columns:2fr 1fr 1fr;
+      padding: 7px;
+      font-size: 10px;
+  }
+  .birinshi{
+      display: flex;
+  }
+  .ekinshi{
+    margin-left: 60%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  .search-box{
+    position: relative;
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    margin: 0 7px;
+    display: flex;
+    flex-direction: row;
+}
+.current{
+    color: white;
+}
+select{
+    background: none;
+    color: white;
+    border: none;
+}
+option{
+    background:rgb(156, 43, 43);
+    color: white;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+} 
+.search-btn{
+    color: rgb(156, 43, 43);
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    background-color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row a .q img:hover{
+    background: url(Aqfutbolka.png);
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+  
+  .betindegitus{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+     background-color: black;
+     opacity: 0.677;
+ }
+ button{
+     background-color: brown;
+     border: 1px solid black;
+     color: black;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     padding: 5px;
+     font-size: 14px;
+ }
+.navbar{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+.navbar ul{
+    margin-right: 20px;
+}
+.navbar ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.navbar ul li a{
+    color: white;
+    font-size:17px;
+    padding:0 50px;
+    border-radius:3px;
+    z-index: 2;
+    align-items: center;
+}
+.checkbtn{
+    font-size:30px;
+    color: rgb(114, 36, 36);
+    line-height: 65px;
+    margin-right:40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+a.active, .navbar a:hover{
+    background: rgb(116, 25, 25);
+    transition: .5s;
+}
+ .my-3 .col-lg-4 div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media(max-width:952px){
+    .navbar ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 658px){
+    .checkbtn{
+        display: block;
+    }
+    .navbar ul{
+        position: fixed;
+        width:100%;
+        height: 100vh;
+        background: black;
+        top:110px;
+        left: -100%;
+        text-align:center;
+        transition: all .5s;
+        z-index: 3;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 50px 0;
+        line-height:30px;
+    }
+    .navbar ul li a{
+        font-size:20px;
+    }
+    .navbar ul li a:hover{
+        color: black;
+        transition: .4s;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    .yes{
+        display: none;
+    }
+}
+ @media(max-width:768px){
+     .basy{
+         grid-template-columns: 1fr 1fr 0.5fr;
+     }
+     .eki{
+         padding: 5px;
+     }
+     .ush{
+         padding: 5px;
+     } 
+     .search-box:hover >.search-txt{
+        width: 130px;
+        padding: 0 6px;
+        font-size: 15px;
+    }  
+   .astyndagy .first {
+       display: flex;
+       flex-direction: column;
+       height: auto;
+       display: block;
+    }
+ }
+ @media(max-width:320px){
+    .search-box:hover >.search-txt{
+        width: 93px;
+        padding: 0 6px;
+        font-size: 10px;
+    }  
+    .astyndagy .first h4, .astyndagy .first ul li{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        display: block;
+     }
+     .astyndagy .first ul li a{
+         justify-content: flex-start;
+     }
+ }
